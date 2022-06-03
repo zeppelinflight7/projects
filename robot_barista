@@ -1,0 +1,33 @@
+#Robot Barista Code
+menu = "We have Black Coffee, Lattes, Cappuccinos, and Espresso."
+name = input("Hello, what is your name?\n")
+if name == "Maximo":
+    print("You are not welcome here")
+else:
+    print("Thank you for coming in today, " + name + ". " + menu)
+order = input("What can I get for you today?\n")
+amount = input("And how many would you like?\n")
+
+#price of menu items
+if order == "Black Coffee":
+    price = 5
+elif order == "Latte":
+    price = 7
+elif order == "Cappuccino":
+    price = 8
+elif order == "Espresso":
+    price = 5
+
+
+payment_type = input("Great, that will be $" + str(int(price) * int(amount)) + ". Will you be paying with cash or card?\n")
+amount_owed = int(price) * int(amount)
+if payment_type == "Card":
+    print("Great, swipe whenever you're ready.")
+else:
+    cash_amount = input("How much will you be paying with?\n")
+    change = int(cash_amount) - int(amount_owed)
+    print("Your change is $" + str(change) + ". Have a great day!")
+exit()
+
+
+
